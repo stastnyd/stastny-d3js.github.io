@@ -1,0 +1,104 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!--Import Google Icon Font-->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Food track</title>
+	</head>
+	<body class="indigo lighten-5">
+		<nav class="indigo lighten-1">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo right"></a>
+				<ul id="nav-mobile" class="left hide-on-med-and-down">
+					<li><a href="piechart.html">Pie Chart</a></li>
+					<li><a href="index.html">Bar Chart</a></li>
+					<li><a href="https://materializecss.com/">Materialize Docs</a></li>
+					<li><a href="https://d3js.org/">D3.js docs</a></li>
+					<li>
+						<a
+							href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+							>Javascript reference</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="indigo section grey-text" style="position: relative;">
+			<h2 class="white-text center">Food Track</h2>
+			<a class="btn-floating btn-large halfway-fab pink modal-trigger" href="#modal">
+				<i class="material-icons">add</i>
+			</a>
+		</div>
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<h4 class="pink-text center">Add Item</h4>
+				<form>
+					<div class="input-field">
+						<input type="text" id="name" placeholder="Enter food" />
+					</div>
+					<div class="input-field">
+						<input type="text" id="orders" placeholder="orders" />
+					</div>
+					<div class="input-field">
+						<input type="text" id="item-cost" placeholder="Cost of grocery" />
+					</div>
+
+					<div class="input-field center">
+						<button class="btn pink white-text">Add Food Item</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="container">
+			<div class="canvas"></div>
+		</div>
+		
+
+		<footer class="page-footer indigo lighten-3">
+			<div class="container">
+			<div class="row center">
+				Završni rad 2020 <br>Dario Stastny
+			</div>
+		</div>
+		</footer>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: 'AIzaSyDC9N5Rs04jBuq5Yc-o8K5-O6W6pqwr0BU',
+				authDomain: 'd3jsbaza.firebaseapp.com',
+				databaseURL: 'https://d3jsbaza.firebaseio.com',
+				projectId: 'd3jsbaza',
+				storageBucket: 'd3jsbaza.appspot.com',
+				messagingSenderId: '594270337380',
+				appId: '1:594270337380:web:a2ca8ca48cb60537de2271',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			const db = firebase.firestore();
+		</script>
+		<script src="https://d3js.org/d3.v5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<script src="index.js"></script>
+		<script src="diagram.js"></script>
+	</body>
+</html>
